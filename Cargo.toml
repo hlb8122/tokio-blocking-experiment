@@ -1,0 +1,17 @@
+[package]
+name = "tokio-blocking"
+version = "0.1.0"
+authors = ["Harry Barber <harrybarber@protonmail.com>"]
+edition = "2018"
+
+[dependencies]
+futures = "0.3.4"
+tokio = { version = "0.2.18", features = ["blocking", "rt-threaded"] }
+
+[dev-dependencies]
+criterion = "0.3.0"
+tokio = { version = "0.2.18", features = ["blocking", "rt-threaded"] }
+
+[[bench]]
+name = "comparison"
+harness = false
